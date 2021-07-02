@@ -1,0 +1,13 @@
+# Version
+version: '3'
+# Services list all the container to build
+services: 
+    # Este es el host name que se necesita para la conexión
+    redis-server:
+        image: 'redis'
+    # Segundo contenedor con el nombre node-app, lo utilizamos para el comando docker build .
+    node-app:
+        build:
+            context: .
+        ports: 
+            - "8080:8080"

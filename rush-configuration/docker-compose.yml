@@ -1,0 +1,19 @@
+version: '3'
+services: 
+    redis-server:
+        image: 'redis'
+    node-app:
+        build:
+            context: ./backend/globoappserver
+        ports: 
+            - '8080:8080'
+        container_name: api-server
+    ui:
+        build:
+            context: ./apps/globoapp
+        ports: 
+            - "3000:3000"
+        # react-script start, abre el browser para permitir que abra en nuestro navegador, pero tenemos que agregar el proxi en el json del ui
+        stdin_open: true
+        # volumes: 
+        #     - "./apps/globoapp:/usr/app"
