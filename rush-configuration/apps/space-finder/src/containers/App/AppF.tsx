@@ -13,10 +13,12 @@ function AppF() {
   const [state, setState] = React.useState<AppStateF>({ user: undefined })
   const authService: AuthService = new AuthService()
 
+  const setUser = (user: User) => {}
+
   return (
     <div className="App">
       App Works
-      <LoginF authService={authService} />
+      <LoginF setUser={setUser} authService={authService} />
     </div>
   )
 }

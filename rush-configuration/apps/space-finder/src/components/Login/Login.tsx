@@ -1,8 +1,10 @@
+import { User } from 'model/Model'
 import React from 'react'
 import { AuthService } from '../../services/AuthService'
 
 interface LoginProps {
   authService: AuthService
+  setUser: (user: User) => void
 }
 
 interface LoginState {
@@ -51,6 +53,7 @@ class Login extends React.Component<LoginProps, LoginState> {
     if (result) {
       console.log('result', result)
       this.setState({ loginSuccesfull: true })
+      this.props.setUser(result)
     } else {
       console.log('wrong login')
       this.setState({ loginSuccesfull: false })

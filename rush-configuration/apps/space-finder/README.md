@@ -13,6 +13,15 @@ En el cursos se menciona que las class tienen más codigo pero igualmente tienes
 - Puedes **limitar, restring**/constraints, en nuestro codigo para evitar errores.
 - Las ayudas en las clases son más detalladas que las que nos da cuando utilizamos functions
 
+### Desventajas de las clases
+
+- Algunos casos es una sintaxis mayor
+- this llega a ser dificil para los programadores novatos
+- Bindeo de metodos, pero se soluciona con arrow functions
+- No tenemos la ventaja de los custom hooks
+
+La documentación oficial lo menciona.
+
 ---
 
 attempted = intento

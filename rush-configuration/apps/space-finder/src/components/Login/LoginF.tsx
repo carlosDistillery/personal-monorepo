@@ -1,8 +1,10 @@
+import { User } from 'model/Model'
 import React from 'react'
 import { AuthService } from '../../services/AuthService'
 
 interface Props {
   authService: AuthService
+  setUser: (user: User) => void
 }
 
 interface LoginState {
@@ -50,6 +52,7 @@ function LoginF(props: Props) {
       setState((prevState) => {
         return { ...prevState, loginSuccesfull: true }
       })
+      props.setUser(result)
     } else {
       console.log('wrong login')
       setState((prevState) => {
